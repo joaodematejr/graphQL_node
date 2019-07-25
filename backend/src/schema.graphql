@@ -1,0 +1,18 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+"""
+Buscar Alguma Informação
+"""
+type Query {
+  users: [User!]!
+  user(id: ID!): User
+}
+"""
+Criar, Alterar ou Deletar
+"""
+type Mutation {
+  createUser(name: String!, email: String!): User
+}
